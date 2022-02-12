@@ -48,7 +48,7 @@ removeHandler = (id) => {
     return (
       <div className="App">
       <NavBar 
-        totalItem={this.state.products.filter(p => p.quantity>0).length}
+        totalItems={this.state.products.filter(p => p.quantity>0).length}
       />
       <ProductList 
         products={this.state.products}

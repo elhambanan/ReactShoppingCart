@@ -3,7 +3,6 @@
     width:  90%;
     height: 50px;
     border: 2px solid #e0e7ff;
-    /* background-color: #c7d2fe; */
     margin-top: 2rem;
     border-radius: 5px;
     display: flex;
@@ -23,7 +22,8 @@
 .value {
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background-color: #c4b5fd;;
+    color: #f5f3ff;
     border-radius: 100%;
     display: flex;
     justify-content: center;

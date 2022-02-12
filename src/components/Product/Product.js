@@ -2,36 +2,36 @@ import styles from "./product.module.css";
 import { BiTrash } from "react-icons/bi";
 
 
-const Product = (props) => {
+const Product = ({product,onChange,onDecrement,onIncrement,onDelete}) => {
     return ( 
-        <div className={styles.product} onClick = {props.click}>
+        <div className={styles.product}>
            
-            <p>product name: {props.product.title} </p>
-            <p>product price: {props.product.price} </p>
+            <p>product name: {product.title} </p>
+            <p>product price: {product.price} </p>
             <span 
                 className={styles.value} >
-                {props.product.quantity}
+                {product.quantity}
             </span>           
             <input type="text" 
                 className={styles.input} 
-                onChange={props.onChange} 
-                value = {props.product.title}/>
+                onChange={onChange} 
+                value = {product.title}/>
             <button 
                 className={`
                 ${styles.btn}
-                ${props.product.quantity === 1 && styles.remove}`}
-                onClick={props.onDecrement}>
-                    {props.product.quantity>1 ? "-" : <BiTrash/>}
+                ${product.quantity === 1 && styles.remove}`}
+                onClick={onDecrement}>
+                    {product.quantity>1 ? "-" : <BiTrash/>}
 
             </button>
             <button 
                 className={styles.btn} 
-                onClick={props.onIncrement}>
+                onClick={onIncrement}>
                     +
             </button>
             <button 
                 className={styles.btn} 
-                onClick={props.onDelete}>
+                onClick={onDelete}>
                     delete
             </button>
         </div>
