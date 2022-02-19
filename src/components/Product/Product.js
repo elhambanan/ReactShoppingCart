@@ -1,8 +1,15 @@
 import styles from "./product.module.css";
 import { BiTrash } from "react-icons/bi";
+import { useEffect } from "react";
 
 
 const Product = ({product,onChange,onDecrement,onIncrement,onDelete}) => {
+    console.log("Product.js render");
+    // CDM + CDU + CWUM (class component) :useEffect()(functional component)
+
+    useEffect(() => {
+        console.log("Product.js useEffect")
+    })
     return ( 
         <div className={styles.product}>
            

@@ -3,22 +3,28 @@ import Product from '../Product/Product';
 import styles from "./productList.module.css"
 
 class ProductList extends Component {
-    
+    componentDidUpdate(prevProps, prevState){
+        console.log("PruductList.js componentDidUpdate");
+        if(prevProps.products !== this.props.products){
+            // some AJAX call => and gets new data
+        }
+      }
    
     renderProduct = () => {
-        if (this.props.products.length === 0)
+        const {products,onChange,onDecrement,onIncrement,onRemove} = this.props;
+        if (products.length === 0)
             return <div>there is no Product</div>
         return (
             <div className={styles.container}>
-                {this.props.products.map((p, index) => {
+                {products.map((p, index) => {
                     return (
                         <Product 
                         product={p}
                         key={index}
-                        onChange = {(e) => this.props.onChange(e, p.id)}
-                        onDecrement = {() => this.props.onDecrement(p.id)}
-                        onDelete = {() => this.props.onRemove(p.id)}
-                        onIncrement = {() => this.props.onIncrement(p.id)}
+                        onChange = {(e) => onChange(e, p.id)}
+                        onDecrement = {() => onDecrement(p.id)}
+                        onDelete = {() => onRemove(p.id)}
+                        onIncrement = {() => onIncrement(p.id)}
                      />
                     )
                 })}
@@ -26,9 +32,11 @@ class ProductList extends Component {
         );
     }
     render() {
+        console.log("ProductList.js render")
+        const {products} = this.props;
         return (
             <div>
-                {!this.props.products.length
+                {!products.length
                     ? (<div>go to Shopping</div>)
                     : (null)
                 }
