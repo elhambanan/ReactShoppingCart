@@ -12,7 +12,7 @@ class ParentComp extends Component {
         },5000)
     }
     render() { 
-        console.log("parent comp--------")
+        console.log("parent comp-------- ")
         return (
             <div>
                 parent component

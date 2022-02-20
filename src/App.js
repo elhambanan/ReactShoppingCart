@@ -11,6 +11,9 @@ import HoverCount from './components/hocExample/HoverCounter';
 import HoverCounter from './components/hocExample/HoverCounter';
 import ClickCounter from './components/hocExample/ClickCounter';
 import ParentComp from './components/PureMemoComp/ParentComp';
+import ClassRef from './components/ref/ClassRef';
+import FuncttionalRef from './components/ref/FunctionalRef';
+import UseRef from './components/ref/UseRef';
 
 class App extends Component {
   constructor(props) {
@@ -96,8 +99,11 @@ shouldComponentUpdate(nextProps, nextState){
      
     return (
       <>
-      <ParentComp />
+      <UseRef />
+      {/* <ClassRef />
+      <FuncttionalRef /> */}
 
+      {/* <ParentComp /> */}
       {/* <ClickCounter name ="Eli"/>
       <HoverCounter /> */}
       {/* <button onClick={()=>{this.setState({isShow: !this.state.isShow})}}>
