@@ -3,12 +3,13 @@ import Product from '../Product/Product';
 import styles from "./productList.module.css"
 
 class ProductList extends Component {
-    componentDidUpdate(prevProps, prevState){
-        console.log("PruductList.js componentDidUpdate");
-        if(prevProps.products !== this.props.products){
-            // some AJAX call => and gets new data
-        }
-      }
+    // componentDidUpdate(prevProps, prevState){
+    //     console.log("PruductList.js componentDidUpdate");
+    //     if(prevProps.products !== this.props.products){
+    //         // some AJAX call => and gets new data
+    //     }
+    //   }
+    
    
     renderProduct = () => {
         const {products,onChange,onDecrement,onIncrement,onRemove} = this.props;

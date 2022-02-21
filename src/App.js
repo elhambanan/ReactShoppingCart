@@ -14,7 +14,12 @@ import ParentComp from './components/PureMemoComp/ParentComp';
 import ClassRef from './components/ref/ClassRef';
 import FuncttionalRef from './components/ref/FunctionalRef';
 import UseRef from './components/ref/UseRef';
+import CounterProvider from './components/Context/CounterProvider';
+import CounterOne from './components/Context/CounterOne';
 
+
+export const UserContext = React.createContext(); 
+export const WebsiteContext = React.createContext();
 class App extends Component {
   constructor(props) {
     super(props)
@@ -99,31 +104,36 @@ shouldComponentUpdate(nextProps, nextState){
      
     return (
       <>
-      <UseRef />
-      {/* <ClassRef />
-      <FuncttionalRef /> */}
+        <CounterProvider>
+          <h2>wellcome to Context</h2>
+          <CounterOne/>
+        </CounterProvider>
+      
+            {/* <UseRef /> */}
+            {/* <ClassRef />
+            <FuncttionalRef /> */}
 
-      {/* <ParentComp /> */}
-      {/* <ClickCounter name ="Eli"/>
-      <HoverCounter /> */}
-      {/* <button onClick={()=>{this.setState({isShow: !this.state.isShow})}}>
-          {this.state.isShow ? "Hide" : "Show"}
-        </button>
-        {this.state.isShow && <FunctionalTimer/>}
+            {/* <ParentComp /> */}
+            {/* <ClickCounter name ="Eli"/>
+            <HoverCounter /> */}
+            {/* <button onClick={()=>{this.setState({isShow: !this.state.isShow})}}>
+                {this.state.isShow ? "Hide" : "Show"}
+              </button>
+              {this.state.isShow && <FunctionalTimer/>}
 
-        <FunctionalCounter/>
-        <ClassCounter/> */}
-      {/* <NavBar 
-        totalItems={this.state.products.filter(p => p.quantity>0).length}
-      />
-      <ProductList 
-        products={this.state.products}
-        onRemove={this.removeHandler}
-        onIncrement={this.incHandler}
-        onChange={this.changeHandler}
-        onDecrement={this.decHandler}
-        /> */}
-    </>
+              <FunctionalCounter/>
+              <ClassCounter/> */}
+            {/* <NavBar 
+              totalItems={this.state.products.filter(p => p.quantity>0).length}
+            />
+            <ProductList 
+              products={this.state.products}
+              onRemove={this.removeHandler}
+              onIncrement={this.incHandler}
+              onChange={this.changeHandler}
+              onDecrement={this.decHandler}
+              /> */}
+      </>
     );
   }
 }
