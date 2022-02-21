@@ -16,6 +16,7 @@ import FuncttionalRef from './components/ref/FunctionalRef';
 import UseRef from './components/ref/UseRef';
 import CounterProvider from './components/Context/CounterProvider';
 import CounterOne from './components/Context/CounterOne';
+import CountReducer from './components/Reducer/CountReducer';
 
 
 export const UserContext = React.createContext(); 
@@ -105,8 +106,8 @@ shouldComponentUpdate(nextProps, nextState){
     return (
       <>
         <CounterProvider>
-          <h2>wellcome to Context</h2>
-          <CounterOne/>
+          {/* <CounterOne/> */}
+          <CountReducer />
         </CounterProvider>
       
             {/* <UseRef /> */}

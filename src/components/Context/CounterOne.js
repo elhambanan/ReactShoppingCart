@@ -12,6 +12,7 @@ const CounterOne = () => {
     // const addFive = (prevCount) => {setCount(prevCount+5)}
     return ( 
         <div>
+            <h2>wellcome to Context</h2>
             <h3>count is: {count}</h3>
             <button onClick={addOne}>add One</button>
             <button onClick={addFive}>add Five</button>
