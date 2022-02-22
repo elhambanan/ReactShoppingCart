@@ -17,6 +17,7 @@ import UseRef from './components/ref/UseRef';
 import CounterProvider from './components/Context/CounterProvider';
 import CounterOne from './components/Context/CounterOne';
 import CountReducer from './components/Reducer/CountReducer';
+import CounterReducerTwo from './components/Reducer/CounterReducerTwo';
 
 
 export const UserContext = React.createContext(); 
@@ -106,8 +107,9 @@ shouldComponentUpdate(nextProps, nextState){
     return (
       <>
         <CounterProvider>
-          {/* <CounterOne/> */}
-          <CountReducer />
+          <CounterOne/>
+          {/* <CountReducer /> */}
+          {/* <CounterReducerTwo /> */}
         </CounterProvider>
       
             {/* <UseRef /> */}
