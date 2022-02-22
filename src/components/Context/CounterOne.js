@@ -13,11 +13,11 @@ const CounterOne = () => {
     // const addFive = (prevCount) => {setCount(prevCount+5)}
     return ( 
         <div>
-            <h2>wellcome to Context</h2>
+            <h2>wellcome to useContext() + useReducer()</h2>
             <h3>count is: {count}</h3>
-            <button onClick={() => dispatch({type : "addOne", value : 6})}>add One</button>
-            <button onClick={() => dispatch({type : "addFive", value : 1})}>add Five</button>
-            <button onClick={() => dispatch({type : "decrement", value : 2})}>decrement</button>
+            <button onClick={() => dispatch({type : "add", value : 6})}>add</button>
+            <button onClick={() => dispatch({type : "reset"})}>reset</button>
+            <button onClick={() => dispatch({type : "decrement", value : 1})}>decrement</button>
         </div>
      );
 }
